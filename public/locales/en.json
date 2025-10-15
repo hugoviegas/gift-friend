@@ -1,0 +1,39 @@
+{
+  "common": {
+    "appName": "Gift Friend",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "submit": "Submit",
+    "confirm": "Confirm"
+  },
+  "nav": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "events": "Events",
+    "wishlists": "Wishlists",
+    "profile": "Profile",
+    "login": "Login",
+    "register": "Sign Up",
+    "logout": "Logout"
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Sign Up",
+    "email": "Email",
+    "password": "Password",
+    "name": "Name",
+    "rememberMe": "Remember me",
+    "forgotPassword": "Forgot password?",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "createAccount": "Create account"
+  }
+}
