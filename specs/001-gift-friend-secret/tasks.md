@@ -46,7 +46,7 @@
 
 - [x] T009 Create MongoDB connection utility in src/lib/db/connection.ts with connection pooling
 - [x] T010 Create encryption utility in src/lib/crypto/encryption.ts for AES-256-GCM assignment encryption
-- [ ] T011 [P] Configure NextAuth.js in src/app/api/auth/[...nextauth]/route.ts with credentials provider
+- [x] T011 [P] Configure NextAuth.js in src/app/api/auth/[...nextauth]/route.ts with credentials provider
 - [ ] T012 [P] Create Zod validation schemas in src/lib/validations/schemas.ts for all entities
 - [ ] T013 [P] Set up next-intl configuration in src/middleware.ts for PT-BR and EN
 - [ ] T014 Create base layout with language switcher in src/app/[locale]/layout.tsx
