@@ -5,7 +5,7 @@
 **Status**: Draft  
 **Input**: User description: "Gift Friend - Secret Santa platform with group management, random drawing, anonymous chat, and gift tracking with multilingual support and encrypted participant matching"
 
-## User Scenarios & Testing *(mandatory)*
+## User Scenarios & Testing _(mandatory)_
 
 ### User Story 1 - Quick Event Join Without Account (Priority: P1)
 
@@ -167,7 +167,7 @@ After an event concludes, participants can view the event in their account histo
 - What happens when a participant tries to chat with their Secret Santa before drawing?
 - What happens when network connectivity is lost during the draw animation?
 
-## Requirements *(mandatory)*
+## Requirements _(mandatory)_
 
 ### Functional Requirements
 
@@ -285,7 +285,7 @@ After an event concludes, participants can view the event in their account histo
 
 - **Event History**: Represents a completed event stored in participant accounts. Attributes include event reference, participant reference, assignment details, reveal status, access timestamp.
 
-## Success Criteria *(mandatory)*
+## Success Criteria _(mandatory)_
 
 ### Measurable Outcomes
 
