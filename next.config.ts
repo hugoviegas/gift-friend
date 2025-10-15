@@ -1,4 +1,8 @@
 import type { NextConfig } from "next";
+import createNextIntlPlugin from "next-intl/plugin";
+
+// Initialize next-intl plugin with custom i18n request path
+const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -8,7 +12,7 @@ const nextConfig: NextConfig = {
     NEXTAUTH_URL: process.env.NEXTAUTH_URL,
   },
 
-  // Internationalization will be handled by next-intl middleware
+  // Internationalization is handled by next-intl middleware and plugin
   // Locale routing through [locale] dynamic segment
 
   // Image optimization domains (add as needed)
@@ -33,4 +37,4 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);
