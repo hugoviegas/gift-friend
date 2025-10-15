@@ -85,19 +85,19 @@
 
 ### Implementation for User Story 1
 
-- [ ] T019 [P] [US1] Create Participant model in src/models/Participant.ts with guest token support
-- [ ] T020 [P] [US1] Create Event model in src/models/Event.ts with unique code generation
-- [ ] T021 [US1] Create participant service in src/lib/services/participantService.ts with guest token generation
-- [ ] T022 [US1] Implement POST /api/auth/guest route in src/app/api/auth/guest/route.ts for guest token generation
-- [ ] T023 [US1] Implement POST /api/events/[eventId]/participants route in src/app/api/events/[eventId]/participants/route.ts
-- [ ] T024 [US1] Implement GET /api/events/[eventId] route in src/app/api/events/[eventId]/route.ts for event details
-- [ ] T025 [US1] Create quick join page in src/app/[locale]/(public)/join/page.tsx with code input form
-- [ ] T026 [US1] Create join form component in src/components/features/events/JoinForm.tsx with validation
-- [ ] T027 [US1] Create event details view component in src/components/features/events/EventDetails.tsx
-- [ ] T028 [US1] Add upgrade prompt component in src/components/features/auth/UpgradePrompt.tsx for protected features
-- [ ] T029 [US1] Add authentication check middleware for guest vs full account in src/lib/auth/checkAuth.ts
+- [x] T019 [P] [US1] Create Participant model in src/models/Participant.ts with guest token support
+- [x] T020 [P] [US1] Create Event model in src/models/Event.ts with unique code generation
+- [x] T021 [US1] Create participant service in src/lib/services/participantService.ts with guest token generation
+- [x] T022 [US1] Implement POST /api/auth/guest route in src/app/api/auth/guest/route.ts for guest token generation
+- [x] T023 [US1] Implement POST /api/events/[eventId]/participants route in src/app/api/events/[eventId]/participants/route.ts
+- [x] T024 [US1] Implement GET /api/events/[eventId] route in src/app/api/events/[eventId]/route.ts for event details
+- [x] T025 [US1] Create quick join page in src/app/[locale]/(public)/join/page.tsx with code input form
+- [x] T026 [US1] Create join form component in src/components/features/events/JoinForm.tsx with validation
+- [x] T027 [US1] Create event details view component in src/components/features/events/EventDetails.tsx
+- [x] T028 [US1] Add upgrade prompt component in src/components/features/auth/UpgradePrompt.tsx for protected features
+- [x] T029 [US1] Add authentication check middleware for guest vs full account in src/lib/auth/checkAuth.ts
 
-**Checkpoint**: User Story 1 complete - participants can join events as guests and view basic information
+**✅ Checkpoint: User Story 1 complete** - participants can join events as guests, view basic event information, and are prompted to create an account for protected features
 
 ---
 
