@@ -1,9 +1,10 @@
 import createMiddleware from "next-intl/middleware";
-import { NextRequest } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
+import { getToken } from "next-auth/jwt";
 
 /**
- * next-intl middleware configuration
- * Handles language routing for PT-BR and EN
+ * Enhanced middleware for Gift Friend
+ * Handles language routing, authentication checks, and protected routes
  */
 
 // Supported locales
@@ -34,12 +35,107 @@ export const intlMiddleware = createMiddleware({
 });
 
 /**
- * Main middleware function
- * Orchestrates language detection and routing
+ * Protected routes that require authentication
+ * Users must be logged in to access these
  */
-export function middleware(request: NextRequest) {
+const protectedRoutes = [
+  "/dashboard",
+  "/events/create",
+  "/profile",
+  "/wishlists",
+];
+
+/**
+ * Public routes accessible without authentication
+ */
+const publicRoutes = ["/", "/login", "/register", "/join"];
+
+/**
+ * Check if a route requires authentication
+ */
+function isProtectedRoute(pathname: string): boolean {
+  // Remove locale prefix from pathname for checking
+  const pathWithoutLocale = locales.some((locale) =>
+    pathname.startsWith(`/${locale}`)
+  )
+    ? pathname.split("/").slice(2).join("/")
+    : pathname;
+
+  return protectedRoutes.some(
+    (route) =>
+      pathWithoutLocale.startsWith(route) || pathWithoutLocale === route
+  );
+}
+
+/**
+ * Check if a route is public
+ */
+function isPublicRoute(pathname: string): boolean {
+  const pathWithoutLocale = locales.some((locale) =>
+    pathname.startsWith(`/${locale}`)
+  )
+    ? pathname.split("/").slice(2).join("/")
+    : pathname;
+
+  return publicRoutes.some(
+    (route) =>
+      pathWithoutLocale.startsWith(route) || pathWithoutLocale === route
+  );
+}
+
+/**
+ * Main middleware function
+ * Orchestrates language detection, routing, and authentication
+ */
+export async function middleware(request: NextRequest) {
+  const { pathname } = request.nextUrl;
+
   // Apply next-intl middleware for language detection and routing
-  return intlMiddleware(request);
+  const intlResponse = intlMiddleware(request);
+
+  // Get authentication token
+  const token = await getToken({
+    req: request,
+    secret: process.env.NEXTAUTH_SECRET,
+  });
+
+  // Check if route requires authentication
+  if (isProtectedRoute(pathname)) {
+    // If not authenticated, redirect to login
+    if (!token) {
+      const locale =
+        locales.find((l) => pathname.includes(`/${l}`)) || defaultLocale;
+      const loginUrl = new URL(`/${locale}/login`, request.url);
+      loginUrl.searchParams.set("redirect", pathname);
+      return NextResponse.redirect(loginUrl);
+    }
+  }
+
+  // If user is authenticated and tries to access login/register, redirect to dashboard
+  if (
+    token &&
+    (pathname.includes("/login") || pathname.includes("/register"))
+  ) {
+    const locale =
+      locales.find((l) => pathname.includes(`/${l}`)) || defaultLocale;
+    return NextResponse.redirect(new URL(`/${locale}/dashboard`, request.url));
+  }
+
+  // Return the i18n response with auth headers
+  const response = NextResponse.next(intlResponse);
+
+  // Add locale to response headers for use in server components
+  const locale =
+    locales.find((l) => pathname.startsWith(`/${l}`)) || defaultLocale;
+  response.headers.set("x-locale", locale);
+
+  // Add auth info to response headers if available
+  if (token) {
+    response.headers.set("x-user-id", token.sub || "");
+    response.headers.set("x-user-email", token.email || "");
+  }
+
+  return response;
 }
 
 /**
@@ -53,7 +149,7 @@ export const config = {
     // - _next/image (image optimization files)
     // - favicon.ico (favicon file)
     // - public folder
-    // - api routes (except those needing i18n)
+    // - api routes (except those needing auth)
     "/((?!_next/static|_next/image|favicon.ico|public|api).*)",
   ],
 };
