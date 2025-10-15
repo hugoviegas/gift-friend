@@ -49,7 +49,7 @@
 - [x] T011 [P] Configure NextAuth.js in src/app/api/auth/[...nextauth]/route.ts with credentials provider
 - [x] T012 [P] Create Zod validation schemas in src/lib/validations/schemas.ts for all entities
 - [x] T013 [P] Set up next-intl configuration in src/middleware.ts for PT-BR and EN
-- [ ] T014 Create base layout with language switcher in src/app/[locale]/layout.tsx
+- [x] T014 Create base layout with language switcher in src/app/[locale]/layout.tsx
 - [ ] T015 [P] Create reusable UI components (Button, Input, Card, Modal) in src/components/ui/
 - [ ] T016 [P] Create email service configuration in src/lib/email/config.ts with Nodemailer
 - [ ] T017 [P] Create email templates in src/lib/email/templates/ for all notification types
