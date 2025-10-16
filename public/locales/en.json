@@ -35,5 +35,90 @@
     "noAccount": "Don't have an account?",
     "hasAccount": "Already have an account?",
     "createAccount": "Create account"
+  },
+  "home": {
+    "badge": "Start Your Secret Santa Adventure",
+    "headline": "The Magic of Secret Santa Awaits",
+    "subheadline": "Organize unforgettable gift exchanges with friends, family, and colleagues",
+    "description": "Gift Friend makes it easy to set up Secret Santa events, create gift wishlists, and celebrate the joy of giving together.",
+    "feature1": "Join events instantly with just a code and your name",
+    "feature2": "Fair and transparent random drawing system",
+    "feature3": "Anonymous chat to ask gift preferences",
+    "feature4": "End-to-end encrypted assignments",
+    "ctaJoin": "Join an Event",
+    "ctaRegister": "Create Event",
+    "ctaJoinNow": "Join Now",
+    "ctaCreateEvent": "Create Event",
+    "loginLink": "Log in here",
+    "whyChooseUs": "Why Choose Gift Friend?",
+    "whyChooseUsDescription": "Everything you need for perfect Secret Santa exchanges",
+    "featureCard1Title": "Easy Setup",
+    "featureCard1Desc": "Create an event in minutes and share a unique code with participants",
+    "featureCard2Title": "Fair Drawing",
+    "featureCard2Desc": "Transparent, randomized assignment with no self-assignment",
+    "featureCard3Title": "Anonymous Giving",
+    "featureCard3Desc": "Keep your identity secret until after the event reveal",
+    "featureCard4Title": "Global Support",
+    "featureCard4Desc": "Available in Portuguese and English with multi-currency support",
+    "howItWorks": "How It Works",
+    "step1Title": "Create or Join",
+    "step1Desc": "Create a new event or join one with a code",
+    "step2Title": "Add Wishlist",
+    "step2Desc": "Share your gift preferences with the group",
+    "step3Title": "Draw Assignments",
+    "step3Desc": "Everyone draws their Secret Santa recipient",
+    "step4Title": "Exchange Gifts",
+    "step4Desc": "Shop, give, and enjoy the magic together!",
+    "readyToStart": "Ready to Start Your Secret Santa?",
+    "readyToStartDesc": "Join an existing event or create your own. Gift Friend makes gift exchanges fun, fair, and memorable."
+  },
+  "join": {
+    "title": "Join an Event",
+    "subtitle": "Enter the event code to join the Secret Santa exchange",
+    "form": {
+      "step1": {
+        "title": "Event Code",
+        "placeholder": "Enter 6-character code",
+        "helper": "The code is shared by the event organizer"
+      },
+      "step2": {
+        "title": "Join Details",
+        "name": "Your Name",
+        "email": "Your Email",
+        "namePlaceholder": "Enter your full name",
+        "emailPlaceholder": "Enter your email address",
+        "locale": "Preferred Language"
+      },
+      "errors": {
+        "invalidCode": "Invalid event code format",
+        "codeNotFound": "Event not found with this code",
+        "invalidEmail": "Invalid email address",
+        "nameRequired": "Name is required",
+        "emailRequired": "Email is required"
+      },
+      "success": "Successfully joined the event!"
+    }
+  },
+  "eventDetails": {
+    "title": "Event Details",
+    "eventInfo": "Event Information",
+    "participants": "Participants",
+    "budget": "Budget",
+    "viewWishlist": "View Wishlist",
+    "loading": "Loading event details...",
+    "error": "Error loading event details",
+    "retry": "Try Again"
+  },
+  "upgrade": {
+    "title": "Create an Account to Continue",
+    "description": "Unlock more features by creating a Gift Friend account",
+    "benefit1": "View gift wishlists of all participants",
+    "benefit2": "See your Secret Santa assignment",
+    "benefit3": "Send anonymous messages",
+    "benefit4": "Create and manage events",
+    "benefit5": "Save your gift preferences",
+    "createAccount": "Create Account",
+    "login": "Log In",
+    "skipForNow": "Skip for Now"
   }
 }

@@ -35,5 +35,92 @@
     "noAccount": "Não tem uma conta?",
     "hasAccount": "Já tem uma conta?",
     "createAccount": "Criar conta"
+  },
+  "home": {
+    "badge": "Comece sua Aventura de Amigo Oculto",
+    "headline": "A Magia do Amigo Oculto Espera por Você",
+    "subheadline": "Organize trocas de presentes inesquecíveis com amigos, família e colegas",
+    "description": "Gift Friend torna fácil organizar eventos de Amigo Oculto, criar listas de desejos e celebrar a alegria de dar juntos.",
+    "feature1": "Entre em eventos instantaneamente com apenas um código e seu nome",
+    "feature2": "Sistema de sorteio aleatório justo e transparente",
+    "feature3": "Chat anônimo para perguntar sobre preferências de presentes",
+    "feature4": "Atribuições criptografadas de ponta a ponta",
+    "ctaJoin": "Entrar em um Evento",
+    "ctaRegister": "Criar Evento",
+    "ctaJoinNow": "Entrar Agora",
+    "ctaCreateEvent": "Criar Evento",
+    "loginLink": "Entre aqui",
+    "whyChooseUs": "Por Que Escolher Gift Friend?",
+    "whyChooseUsDescription": "Tudo o que você precisa para trocas de Amigo Oculto perfeitas",
+    "featureCard1Title": "Configuração Fácil",
+    "featureCard1Desc": "Crie um evento em minutos e compartilhe um código único com os participantes",
+    "featureCard2Title": "Sorteio Justo",
+    "featureCard2Desc": "Atribuição aleatória transparente sem auto-atribuição",
+    "featureCard3Title": "Doação Anônima",
+    "featureCard3Desc": "Mantenha sua identidade em segredo até após a revelação do evento",
+    "featureCard4Title": "Suporte Global",
+    "featureCard4Desc": "Disponível em Português e Inglês com suporte a múltiplas moedas",
+    "howItWorks": "Como Funciona",
+    "step1Title": "Criar ou Entrar",
+    "step1Desc": "Crie um novo evento ou entre em um com um código",
+    "step2Title": "Adicionar Lista de Desejos",
+    "step2Desc": "Compartilhe suas preferências de presentes com o grupo",
+    "step3Title": "Sorteio de Atribuições",
+    "step3Desc": "Todos sorteiam seu destinatário de Amigo Oculto",
+    "step4Title": "Trocar Presentes",
+    "step4Desc": "Compre, dê e aproveite a magia juntos!",
+    "readyToStart": "Pronto para Começar seu Amigo Oculto?",
+    "readyToStartDesc": "Entre em um evento existente ou crie o seu próprio. Gift Friend torna as trocas de presentes divertidas, justas e memoráveis.",
+    "hasAccount": "Já tem uma conta?",
+    "loginLink": "Entre aqui"
+  },
+  "join": {
+    "title": "Entrar em um Evento",
+    "subtitle": "Digite o código do evento para entrar na troca de Amigo Oculto",
+    "form": {
+      "step1": {
+        "title": "Código do Evento",
+        "placeholder": "Digite o código de 6 caracteres",
+        "helper": "O código é compartilhado pelo organizador do evento"
+      },
+      "step2": {
+        "title": "Detalhes da Entrada",
+        "name": "Seu Nome",
+        "email": "Seu E-mail",
+        "namePlaceholder": "Digite seu nome completo",
+        "emailPlaceholder": "Digite seu endereço de e-mail",
+        "locale": "Idioma Preferido"
+      },
+      "errors": {
+        "invalidCode": "Formato de código de evento inválido",
+        "codeNotFound": "Evento não encontrado com este código",
+        "invalidEmail": "Endereço de e-mail inválido",
+        "nameRequired": "Nome é obrigatório",
+        "emailRequired": "E-mail é obrigatório"
+      },
+      "success": "Você entrou no evento com sucesso!"
+    }
+  },
+  "eventDetails": {
+    "title": "Detalhes do Evento",
+    "eventInfo": "Informações do Evento",
+    "participants": "Participantes",
+    "budget": "Orçamento",
+    "viewWishlist": "Ver Lista de Desejos",
+    "loading": "Carregando detalhes do evento...",
+    "error": "Erro ao carregar detalhes do evento",
+    "retry": "Tentar Novamente"
+  },
+  "upgrade": {
+    "title": "Crie uma Conta para Continuar",
+    "description": "Desbloqueie mais recursos criando uma conta Gift Friend",
+    "benefit1": "Visualize listas de desejos de todos os participantes",
+    "benefit2": "Veja sua atribuição de Amigo Oculto",
+    "benefit3": "Envie mensagens anônimas",
+    "benefit4": "Crie e gerencie eventos",
+    "benefit5": "Salve suas preferências de presentes",
+    "createAccount": "Criar Conta",
+    "login": "Entrar",
+    "skipForNow": "Pular por Enquanto"
   }
 }

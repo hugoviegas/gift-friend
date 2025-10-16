@@ -14,11 +14,11 @@ const defaultLocale: Locale = "pt-BR";
 // Message loader that dynamically imports JSON files
 async function loadMessages(locale: Locale) {
   try {
-    // Try to import from src/locales first
-    const messages = await import(`../../locales/${locale}.json`);
+    // Import from public/locales directory
+    const messages = await import(`../../public/locales/${locale}.json`);
     return messages.default;
   } catch (e) {
-    console.warn(`Failed to load messages for locale ${locale}`);
+    console.warn(`Failed to load messages for locale ${locale}:`, e);
     // Fallback to default locale
     if (locale !== defaultLocale) {
       return loadMessages(defaultLocale);
